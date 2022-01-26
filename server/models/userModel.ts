@@ -27,8 +27,11 @@ const userSchema = new mongoose.Schema({
     type:String,
     default:'normal' //social //phone number
   },
-  isAdmin:{type:Boolean,default:false},
-  isSuperAdmin:{type:Boolean,default:false},
+  role:{
+    type:String,
+    default:'user' //admin
+  },
+
 },{timestamps:true})
 
 export default mongoose.model('User', userSchema)
