@@ -2,6 +2,8 @@ import {Request,Response} from 'express'
 import Users from '../models/userModel'
 import bcrypt from 'bcrypt'
 // import jwt from 'jsonwebtoken'
+import { generateActiveToken} from '../config/generateToken'
+
 
 
 const authCtrl = {
@@ -18,14 +20,15 @@ const authCtrl = {
 
         const passwordHash = await bcrypt.hash(password,12)
 
-        const newUser = new Users({
-          name, account, password:passwordHash
-        })
+        const newUser = { name, account, password:passwordHash }
+
+        const active_token = generateActiveToken({newUser})
 
         res.json({
           status: 'OK',
           msg:'Register successful.',
-          data: newUser
+          data: newUser,
+          active_token
         })
       }catch(err){
         return res.status(500).json({msg: err})
