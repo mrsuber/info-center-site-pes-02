@@ -22,7 +22,11 @@ const authCtrl = {
           name, account, password:passwordHash
         })
 
-        res.json({msg:'Register successful.', data: newUser})
+        res.json({
+          status: 'OK',
+          msg:'Register successful.',
+          data: newUser
+        })
       }catch(err){
         return res.status(500).json({msg: err})
       }
