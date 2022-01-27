@@ -4,7 +4,8 @@ import bcrypt from 'bcrypt'
 // import jwt from 'jsonwebtoken'
 import { generateActiveToken} from '../config/generateToken'
 import sendMail from '../config/sendMail'
-import {validateEmail} from '../middleware/valid'
+import {validateEmail,validPhone} from '../middleware/valid'
+import {sendSms} from '../config/sendSMS'
 
 
 const CLIENT_URL = `${process.env.BASE_URl}`
@@ -32,6 +33,9 @@ const authCtrl = {
         if(validateEmail(account)){
           sendMail(account,url,'Verify your email address')
           return res.json({ msg: "Success! Please check your email." })
+        }else if(validPhone(account)){
+          sendSms(account, url,"Verify your phone number")
+          return res.json({ msg: "Success! Please check your phone." })
         }
 
 
