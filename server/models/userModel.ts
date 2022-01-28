@@ -25,7 +25,7 @@ const userSchema = new mongoose.Schema({
   },
   type:{
     type:String,
-    default:'normal' //social //phone number
+    default:'register' //social //login
   },
   role:{
     type:String,
