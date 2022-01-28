@@ -100,6 +100,27 @@ const authCtrl = {
     } catch (err:any) {
         return res.status(500).json({msg:err.message})
     }
+  },
+  refreshToken: async(req:Request, res:Response) =>{
+    try {
+      const rf_token = req.cookies.refreshtoken
+      if(!rf_token) return res.status(400).json({msg:"Please login now!"})
+
+      const decoded = <IDecodedToken>jwt.verify(rf_token, `${process.env.REFRESH_TOKEN_SECRET}`)
+
+      if(!decoded.id) return res.status(400).json({msg:"Please login now!"})
+
+      const user= await Users.findById(decoded.id).select("-password")
+
+      if(!user) return res.status(400).json({msg:"This accont does not exist. "})
+
+      const access_token = generateAccessToken({id: user._id})
+
+      res.json({access_token})
+
+    } catch (err:any) {
+        return res.status(500).json({msg:err.message})
+    }
   }
 }
 
