@@ -1,6 +1,9 @@
 import './Header.css'
 import logo from '../../images/logo/suber_logo1.png'
 import { Link } from 'react-router-dom'
+import {Search} from '../../components'
+
+
  const Header =()=>{
 
    const bfLoginLinks =[
@@ -24,7 +27,8 @@ import { Link } from 'react-router-dom'
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav  ms-auto">
+        <Search />
+          <ul className="navbar-nav  info_header_link_ul_container">
 
             {
               bfLoginLinks.map((link, index) => (
