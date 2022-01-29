@@ -1,0 +1,27 @@
+.info__brand-img{
+
+  margin-top: -5px;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: var(--white);
+  object-fit: contain;
+  box-shadow: var(--box-shadow)
+}
+.info__brand-wrapper{
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.info_logoText{
+  font-size: 1rem;
+  font-weight: bolder;
+  color: var(--blue);
+  box-shadow: var(--box-shadow);
+  border-radius: 20px;
+  padding:  10px;
+  cursor: pointer;
+  transition: 0.4s linear;
+  background-color: var(--white);
+}
