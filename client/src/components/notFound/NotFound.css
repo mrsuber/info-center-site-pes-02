@@ -1,0 +1,12 @@
+.info__notfound_container{
+  position: relative;
+  min-height: calc(100vh - 70px);
+}
+
+.info__notfound_title{
+  position: absolute;
+  color: #6c757d;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
