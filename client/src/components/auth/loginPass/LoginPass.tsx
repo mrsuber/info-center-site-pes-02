@@ -19,7 +19,7 @@ const LoginPass = () =>{
   return(
     <form>
         <div className="info__form_group">
-          <label htmlFor= "account">Email / Phone number</label>
+          <label htmlFor= "account" className="info__form_label">Email / Phone number</label>
           <input
           type="text"
           className="info__login_email_input"
@@ -31,7 +31,7 @@ const LoginPass = () =>{
         </div>
 
         <div className="info__form_group">
-          <label htmlFor= "password">Password</label>
+          <label htmlFor= "password" className="info__form_label">Password</label>
           <div className="info__pass">
               <input
               type={typePass ? "text" : "password"}

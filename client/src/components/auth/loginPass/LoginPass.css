@@ -82,3 +82,22 @@
   border-color:#625f5f;
 
 }
+
+.info__pass{
+  position: relative;
+}
+
+.info__pass small{
+  position: absolute;
+  top:50%;
+  right: 5px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  opacity: 0.5;
+
+}
+
+
+.info__form_label{
+  margin-bottom: 1rem;
+}
