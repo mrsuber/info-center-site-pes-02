@@ -72,7 +72,13 @@
 }
 
 .info__login_submit_btn:hover{
-  color:var(--blue);
+  /* color:var(--blue);
   background-color:#fff;
-  border-color:var(--blue);
+  border-color:var(--blue); */
+}
+
+.info__login_submit_btn:disabled {
+  background: #625f5f;
+  border-color:#625f5f;
+
 }
