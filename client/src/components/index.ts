@@ -3,6 +3,7 @@
 export {default as LoginBasePage} from './auth/loginPage/LoginPage'
 export {default as RegisterBasePage} from './auth/registerPage/RegisterPage'
 export {default as LoginPass} from './auth/loginPass/LoginPass'
+export {default as LoginSMS} from './auth/loginSms/LoginSMS'
 //end of auth exports
 
 //header export
@@ -18,3 +19,4 @@ export {default as Footer} from './footer/Footer'
 // end of footer export
 
 export {default as NotFound} from './notFound/NotFound'
+export {default as HomePage} from './homePage/HomePage'

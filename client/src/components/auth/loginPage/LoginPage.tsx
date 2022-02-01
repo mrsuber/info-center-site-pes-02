@@ -1,5 +1,5 @@
 import './LoginPage.css'
-import {LoginPass} from "../../../components"
+import {LoginPass,LoginSMS} from "../../../components"
 import {Link} from 'react-router-dom'
 import {useState} from 'react'
 
@@ -10,7 +10,7 @@ const LoginPage = () =>{
     <div className="info__auth_page">
       <div className="info__auth_box">
         <h3 className="info__auth_title">Login to info Center</h3>
-        <LoginPass />
+        {sms ? <LoginSMS/> : <LoginPass /> }
 
         <small className="info__forgot_password_link_container">
             <span className="info__forgot_password_link ">
