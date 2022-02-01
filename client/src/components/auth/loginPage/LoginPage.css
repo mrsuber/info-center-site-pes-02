@@ -1,3 +1,23 @@
+.info__auth_page{
+width: 100%;
+padding: 2.5rem 0;
+background: #fdfdfd;
+display: flex;
+justify-content: center;
+}
+
+.info__auth_box{
+  background: #fff;
+  max-width: 400px;
+  width: 100%;
+  border: 1px solid #ddd;
+  padding: 2.7rem 1.7rem;
+}
+
+.info__form_group{
+
+}
+
 .info__auth_title{
   text-transform:uppercase;
   text-align: center;
@@ -11,6 +31,12 @@
   width:50%;
 }
 
+.info__forgot_password_link2{
+  flex:0 0 auto;
+  width:50%;
+  text-align: right;
+}
+
 .info__forgot_password_link_container{
   color:#0d6efd;
   cursor: pointer;
@@ -21,4 +47,7 @@
 
 .info__register_link{
   color: crimson;
+}
+form button{
+  margin: 1.5rem 0;
 }
