@@ -4,3 +4,21 @@
   margin-bottom: 2rem;
 
 }
+
+
+.info__forgot_password_link{
+  flex:0 0 auto;
+  width:50%;
+}
+
+.info__forgot_password_link_container{
+  color:#0d6efd;
+  cursor: pointer;
+  display: flex;
+  margin-bottom: 1rem;
+
+}
+
+.info__register_link{
+  color: crimson;
+}
