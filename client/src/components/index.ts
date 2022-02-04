@@ -20,3 +20,5 @@ export {default as Footer} from './footer/Footer'
 
 export {default as NotFound} from './notFound/NotFound'
 export {default as HomePage} from './homePage/HomePage'
+//exporting loader
+export {default as Loading} from './loading/Loading'
