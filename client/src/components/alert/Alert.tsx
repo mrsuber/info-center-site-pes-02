@@ -4,7 +4,7 @@ import './Alert.css'
 
 const Alert = () => {
   return(
-    <div>
+    <div className="info__alert_container">
 	<Loading/>
     </div>
   )
