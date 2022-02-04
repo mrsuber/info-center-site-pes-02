@@ -1,6 +1,9 @@
 import './LoginPass.css'
 import {useState} from 'react'
-import {InputChange} from '../../../utils/TypeScript'
+import {useDispatch} from 'react-redux'
+import {InputChange,FormSubmit} from '../../../utils/TypeScript'
+import {login} from '../../../redux/actions/authAction'
+
 
 const LoginPass = () =>{
   // handle unchange input
@@ -14,10 +17,17 @@ const LoginPass = () =>{
   }
 
 
-  //handle password hide or shadow
+  //handle password hide or show password
   const [typePass, setTypePass] = useState(false)
+
+  const dispatch = useDispatch()
+
+  const handleSubmit = (e:FormSubmit)=>{
+    e.preventDefault()
+    dispatch(login(userLogin))
+  }
   return(
-    <form>
+    <form onSubmit={handleSubmit}>
         <div className="info__form_group">
           <label htmlFor= "account" className="info__form_label">Email / Phone number</label>
           <input
