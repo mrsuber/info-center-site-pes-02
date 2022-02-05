@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import PageRender from './PageRender'
-import {Header,Footer} from './components'
+import {Header,Footer,Alert} from './components'
 import home from './pages/home'
 
 function App() {
@@ -9,7 +9,9 @@ function App() {
     <div className="container">
 
       <Router>
+      <Alert />
       <Header />
+
         <Switch>
           <Route exact path="/" component={home} />
           <Route exact path="/:page" component={PageRender} />
