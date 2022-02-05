@@ -22,3 +22,5 @@ export {default as NotFound} from './notFound/NotFound'
 export {default as HomePage} from './homePage/HomePage'
 //exporting loader
 export {default as Loading} from './loading/Loading'
+export {default as Alert} from './alert/Alert'
+export {default as Toast} from './toast/Toast'
