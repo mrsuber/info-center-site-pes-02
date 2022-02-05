@@ -1,5 +1,5 @@
 import React from 'react'
-import './Toast.css
+import './Toast.css'
 const Toast = () => {
   return(
     <>
