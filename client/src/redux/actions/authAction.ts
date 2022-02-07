@@ -12,6 +12,7 @@ export const login =  (userLogin:IUserLogin) => async (dispatch: Dispatch<IAuthT
     try {
           dispatch({type: ALERT, payload:{ loading: true } })
 
+
             const res = await postAPI('login', userLogin)
 
 
@@ -22,9 +23,10 @@ export const login =  (userLogin:IUserLogin) => async (dispatch: Dispatch<IAuthT
                 user:res.data.user
               }
             })
-          dispatch({type: ALERT, payload:{ loading: false } })
+          // dispatch({type: ALERT, payload:{ loading: false } })
+          dispatch({type: ALERT, payload:{ success: "Login Success" } })
     } catch (err: any) {
       dispatch({type: ALERT, payload:{ errors: err.response.data.msg } })
-      
+
     }
 }
