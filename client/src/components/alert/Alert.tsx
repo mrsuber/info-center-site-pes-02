@@ -17,6 +17,16 @@ const Alert = () => {
         bgColor="bg-danger"
        />
      }
+
+
+       {
+         alert.success &&
+          <Toast
+           title="Success"
+           body={alert.success}
+           bgColor="bg-success"
+          />
+        }
     </div>
   )
 }
