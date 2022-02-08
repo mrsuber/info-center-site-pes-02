@@ -23,8 +23,8 @@ const LoginPage = () =>{
         </small>
 
         <p>
-          You don't have an account?
-          <Link to={`/register`} className="info__register_link">{` Register Now`}</Link>
+          {`You don't have an account? `}
+          <Link to={`/register`} className="info__register_link"> Register Now</Link>
         </p>
 
 
