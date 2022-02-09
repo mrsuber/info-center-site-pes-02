@@ -5,7 +5,6 @@ import {useState} from 'react'
 
 
 const RegisterPage = () =>{
-  const [sms, setSms] = useState(false)
   return(
     <div className="info__auth_page">
       <div className="info__auth_box">
