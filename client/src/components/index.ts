@@ -4,6 +4,7 @@ export {default as LoginBasePage} from './auth/loginPage/LoginPage'
 export {default as RegisterBasePage} from './auth/registerPage/RegisterPage'
 export {default as LoginPass} from './auth/loginPass/LoginPass'
 export {default as LoginSMS} from './auth/loginSms/LoginSMS'
+export {default as RegisterForm} from './auth/registerForm/RegisterForm'
 //end of auth exports
 
 //header export
