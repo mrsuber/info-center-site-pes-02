@@ -2,7 +2,7 @@ import './RegisterForm.css'
 import {useState} from 'react'
 import {useDispatch} from 'react-redux'
 import {InputChange,FormSubmit} from '../../../utils/TypeScript'
-// import {login} from '../../../redux/actions/authAction'
+import {register} from '../../../redux/actions/authAction'
 
 
 const RegisterForm = () =>{
@@ -32,7 +32,7 @@ const RegisterForm = () =>{
 
   const handleSubmit = (e:FormSubmit)=>{
     e.preventDefault()
-    // dispatch(login(userRegister))
+    dispatch(register(userRegister))
   }
   return(
     <form onSubmit={handleSubmit}>
