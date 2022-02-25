@@ -46,8 +46,10 @@ const authCtrl = {
   activeAccount: async(req:Request, res:Response) =>{
     try {
       const {active_token } = req.body
+      console.log(active_token)
       const decoded = <IDecodedToken>jwt.verify(active_token,`${process.env.ACTIVE_TOKEN_SECRET}`)
 
+      console.log("decode",decoded)
       const {newUser} = decoded
 
       if(! newUser) return res.status(400).json({msg:"Invalid authentication"})
